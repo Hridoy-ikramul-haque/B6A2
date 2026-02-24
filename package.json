@@ -1,0 +1,29 @@
+{
+  "name": "b6a2",
+  "version": "1.0.0",
+  "description": "A backend API for a vehicle rental management system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx tsx watch ./src/server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hridoy-ikramul-haque/B6A2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hridoy-ikramul-haque/B6A2/issues"
+  },
+  "homepage": "https://github.com/Hridoy-ikramul-haque/B6A2#readme",
+  "dependencies": {
+    "express": "^5.2.1",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "tsx": "^4.21.0"
+  }
+}
