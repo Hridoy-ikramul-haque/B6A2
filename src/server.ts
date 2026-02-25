@@ -1,8 +1,14 @@
 import express, { Request, Response } from "express";
+import initDB from "./config/db";
+import configData from "./config";
+
 
 const app = express(); 
 
-const port = 5000;
+const port = configData.port||6000;
+
+initDB();
+console.log(process.cwd());
 
 app.get('/', (req:Request, res:Response) => {
     res.status(200).json({
