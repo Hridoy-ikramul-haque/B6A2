@@ -12,6 +12,16 @@ const signUp = async (payload: Record<string, unknown>) => {
 
 
 
+const login = async (payload: Record<string, unknown>) => {
+    const { email } = payload;
+    const result = await pool.query(`
+        SELECT * FROM users WHERE email= $1
+        `, [email]);
+    console.log(email);
+    return result;
+}
+
+
 const getAllUser = async () => {
     const result = await pool.query(`
         SELECT * FROM users
@@ -22,5 +32,6 @@ const getAllUser = async () => {
 
 export const userServices = {
     signUp,
-    getAllUser
+    getAllUser,
+    login
 }

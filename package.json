@@ -19,8 +19,11 @@
   },
   "homepage": "https://github.com/Hridoy-ikramul-haque/B6A2#readme",
   "dependencies": {
+    "@types/jsonwebtoken": "^9.0.10",
+    "bcrypt": "^6.0.0",
     "dotenv": "^17.3.1",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "pg": "^8.18.0",
     "typescript": "^5.9.3"
   },
