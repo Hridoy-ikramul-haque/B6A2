@@ -4,6 +4,7 @@ import configData from "./config";
 import { pool } from "./config/db";
 import { userRoutes } from "./modules/users/users.routes";
 import { vehicleroute } from "./modules/vehicles/vehicle.routes";
+import { authRoutes } from "./modules/auth/auth.routes";
 
 
 const app = express();
@@ -25,6 +26,7 @@ app.get('/', (req: Request, res: Response) => {
 // routes-> controller->business Logic 
 app.use('/api/v1', userRoutes);
 app.use('/api/v1', vehicleroute);
+app.use('/api/v1/auth', authRoutes);
 
 
 
