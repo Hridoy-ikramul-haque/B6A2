@@ -11,10 +11,10 @@ const signIn = async (payload: Record<string, any>) => {
     if (result.rows.length === 0) return null;
     const user = result.rows[0];
     const isMatch = await bcrypt.compare(password, user.password);
-    console.log(isMatch);
+    // console.log(isMatch);
     if (!isMatch) return null;
     const token = jwt.sign({ name: user.name, email: user.email }, configData.jwtSecret as string, { expiresIn: "1d" });
-    return { token, user, isMatch };
+    return { token, user };
 }
 
 
